@@ -248,8 +248,8 @@ return {
         nesting_rules = {},
         filesystem = {
           filtered_items = {
-            visible = false, -- when true, they will just be displayed differently than normal items
-            hide_dotfiles = true,
+            visible = true, -- when true, they will just be displayed differently than normal items
+            hide_dotfiles = false,
             hide_gitignored = true,
             hide_hidden = true, -- only works on Windows for hidden files/directories
             hide_by_name = {
@@ -266,7 +266,7 @@ return {
               --".env*",
             },
             never_show = { -- remains hidden even if visible is toggled to true, this overrides always_show
-              --".DS_Store",
+              '.DS_Store',
               --"thumbs.db"
             },
             never_show_by_pattern = { -- uses glob style patterns
